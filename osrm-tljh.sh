@@ -12,8 +12,10 @@ sudo mkdir -p /srv/data/shared
 sudo ln -s /srv/data/shared shared
 sudo chmod -R go+rwx /srv/data/shared
 
+# Uncomment to enable idle culler:
 # The idle check interval represents how frequent (in seconds) the Hub will check if there are any idle servers to cull. Set to 2 hours.
-sudo tljh-config set services.cull.every 7200
+# sudo tljh-config set services.cull.every 7200
+sudo tljh-config set services.cull.enabled False
 sudo tljh-config reload
 
 ###
